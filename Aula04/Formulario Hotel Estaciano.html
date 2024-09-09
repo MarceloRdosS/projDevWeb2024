@@ -1,0 +1,152 @@
+<!doctype HTML>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8"/> 
+   <meta name="author" content="Prof. Ronaldo Candido" />
+   <meta name="description" content="Reserva Hotel Estaciano" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Implementação Futura de CSS-->
+    <title> Hotel Cristo Redentor </title>
+    <a name="topo">
+    </a>
+    <style type="text/css">
+        html {
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            background-image: url('./Cristo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-size: 60px;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            color: #00539F;
+            text-shadow: 3px 3px 1px black;
+            font-family: sans-serif;
+        }
+        body {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #00a2ff91;
+            padding: 0 20px 20px 20px;
+            border: 5px solid black; 
+        }
+        #logo {
+            background-image: url(./logo.webp);
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100px;
+            position: fixed;
+            left: 3%;
+            background-color: #00529f7a;
+            border-radius: 20px;
+            padding: 10px;
+            background-position: 5px;
+            border: #01070c65 solid 1px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">
+        
+    </div>
+
+
+    <h1>Formulário de Reserva - Hotel Cristo Redentor</h1>
+    <!--Link Abrindo outra janela/guia-->
+    <a href="http://estacio.br" target="_blank">
+    <h3>Voltar para Estácio</h3>
+    </a>
+    <a href="topo">
+    </a>
+
+
+    <!-- Imagem
+        <figure>
+        <figcaption>Cristo Redentor Resort </figcaption>
+        <img src="../site/Imagens/Cristo.jpg" alt="Foto das férias no Rio de Janeiro"
+        width "375" height="375" >
+        </figure>
+    -->
+
+            
+
+    <!--Formulário Usando Javascript-->
+<form action="#" method="post" oninput="total.value= (noites.valueAsNumber*250)"
+                                                + ((hospede.valueAsNumber-1)*50)>    
+    <fieldset>
+        <legend> Dados da reserva : </legend> <br></br>
+    <!--Container-->
+    <div class="campo" >
+    <label> Nome: </label>   
+    <input type="text" id="Nome" name="nome"
+        placeholder="Digite o nome ..." style="width: 20em"
+        required /><br />
+<div><br/>
+        <div class="campo">
+        <label class="checkbox">
+        <input type="radio" name="sexo" value="masculino" />Masculino
+        </label>
+        <label class="checkbox">
+        <input type="radio" name="sexo" value="feminino" />Feminino
+        </label><br /><br />
+        </div>
+        <div class="campo">
+        <label>E-mail:</label>
+        <input type="email" id="email" name="email" required /><br /><br /></div>
+        <div class="campo">
+        <label>Repita o e-mail:</label>
+        <input type="email" id="email_repeti" name="email_repeti" required
+        oninput="check(this)" /><br /><br />
+        </div>
+        <div class="campo">
+        <label>Data de chegada:</label>
+        <input type="date" id="dt_chegada" name="dt_chegada" required /><br /><br />
+        </div>
+        <div class="campo">
+            <label>Número de noites (R$250,00 por noite):</label>
+            <input type="number" id="noites" name="noites" value="1" min="1" max="30"
+            required /><br /><br /></div>
+            <div class="campo">
+            <label>Número de hóspedes (R$50,00 adicional por noite):</label>
+            <input type="number" id="hospede" name="hospede" value="1" min="1" max="4"
+            required /><br /><br />
+            </div>
+            <fieldset class="grupo">
+            <div class="campo">
+            <label>Total estimado:</label>
+            R$<output id="total" name="total">250</output>.00
+            <br></div>
+            </fieldset><br />
+            <div class="campo">
+            <label>Mensagem</label>
+            <textarea name="message" style="width: 40em"
+            placeholder="Algum comentário extra?"></textarea><br /><br />
+            </div>
+            <div class="campo">
+                <label>Código promocional:</label>
+                <input type="text" id="promo" name="promo" maxlength="6"
+                pattern="[A-Za-z0-9]{6}"
+                title="Codigo promocional consiste em 6 caracteres alfanuméricos." /> <br/>
+                <br /> </div>
+                <div class="campo">
+                <label>Newsletter</label>
+                <label class="checkbox">
+                <input type="checkbox" name="newsletter" value="1" /> Gostaria de receber a
+                nossa Newsletter </label></br><br>
+                </div>
+                <button class="botao submit" type="submit" name="submit">Requerer reserva
+                </button>
+                </fieldset>
+                </form>   
+<a href="#topo">
+    <p> Voltar ao início </p>
+</a>
+</body>
+</html>
+
+    
