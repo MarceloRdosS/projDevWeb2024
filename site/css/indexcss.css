@@ -9,7 +9,7 @@ main {
     height: 100%;
 }
 
-nav{
+#navbar{
     display: flex;
     width: 100%;
     height: 5%;
@@ -19,6 +19,7 @@ nav{
     z-index: 20;
     justify-content: center;
 }
+
 #menu {
     list-style: none;
     display: flex;
@@ -44,15 +45,13 @@ nav{
 
 #menu button h1 {
     color: rgb(187, 162, 53);
-    max-font-size: 20pt;
+    font-size: 100%
     }
 
 #menu button:hover {
     transition: .3s;
     border-bottom: 1px solid rgb(187, 162, 53)
 }
-
-
 
 #reservaBtn {
     
