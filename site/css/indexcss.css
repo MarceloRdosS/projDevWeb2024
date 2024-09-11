@@ -104,6 +104,6 @@ footer {
 .texto1 {
     color: darkred;
     text-align: center;
-    font-style: italic;
-    font-size: 30px;
+    font-style: initial;
+    font-size: 20px;
 }
