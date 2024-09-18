@@ -10,28 +10,39 @@ main {
 }
 
 #navbar{
+    background-image: linear-gradient(to right, #024059, #b5babb);
     display: flex;
     width: 100%;
-    height: 5%;
+    height: 12%;
     min-height: 20px;
     opacity: 100%;
     position: fixed;
     z-index: 20;
-    justify-content: center;
+    justify-content: right;
+    border-radius: 0px 0px 20px 20px;
 }
 
 #menu {
     list-style: none;
     display: flex;
-    width: 40%;
     height: 100%;
-    justify-content: center;
-    gap: 20px;
+    justify-content: right;
+    gap: 30%;
+    margin-right: 10%;
 }
 
 #menu li{
     height: 100%;
     width: 30%;
+}
+
+#nav-logo {
+    position: absolute;
+    left: 3%;
+    height: 90%;
+    width: 8%;
+    display: flex;
+    margin-top: 0.3%;
 }
 
 #menu button {
@@ -44,8 +55,8 @@ main {
 }
 
 #menu button h1 {
-    color: rgb(187, 162, 53);
-    font-size: 100%
+
+    font-size: 1.3em
     }
 
 #menu button:hover {
@@ -98,7 +109,7 @@ section {
 footer {
     background-color: bisque;
     width: 100%;
-    height: 7%;
+    height: 15%;
 }
 
 .texto1 {
@@ -107,3 +118,8 @@ footer {
     font-style: initial;
     font-size: 20px;
 }
+
+footer>div+div {
+    margin-top: 0px;
+}
+
