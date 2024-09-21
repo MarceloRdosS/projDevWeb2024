@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2000px;
+    background-image: url("../img/quem-somos-mainIMG.jpg");
+    background-size: cover;
+}
+
+section {
+    margin-top: 5%;
+    height: 80%;
+    background-color: #fff;
+    width: 80%;
+    border-radius: 20px;
+}
