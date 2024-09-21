@@ -1,6 +1,10 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Roboto",sans-serif;
+    color: gold;
+    list-style: none;
+    text-decoration: none;
 }
 
 main {
@@ -53,16 +57,54 @@ main {
     font-size: 1.3em;
 }
 
-#menu button:hover {
+#menu button:hover, #footer-menu a:hover, #footer-social li:hover{
     transition: .3s;
-    background-color: rgba(55, 63, 61, 0.76);
+    background-color: rgba(240, 248, 255, 0.247);
     color: #fff;
     
 }
 
-#reservaBtn {
-   
+#footer-top {
+    background-image: linear-gradient(to right, rgb(2, 64, 89), rgb(181, 186, 187));
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50%;
 }
+
+#footer-menu{
+    display: flex;
+    gap: 40px;
+}
+
+#footer-social{
+    display: flex;
+    gap: 40px;
+}
+
+#footer-social li, #footer-menu a{
+        padding: 10px;
+        border-radius: 10px;
+}
+
+#footer-bottom {
+    clear: both;
+    display: flex;
+    background-color: rgb(37, 37, 38);
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer #footer-bottom .copyright-text {
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+}
+
 
 
 header {
@@ -103,7 +145,6 @@ section {
 }
 
 footer {
-    background-color: bisque;
     width: 100%;
     height: 15%;
 }
@@ -118,4 +159,3 @@ footer {
 footer>div+div {
     margin-top: 0px;
 }
-
