@@ -11,29 +11,29 @@ main {
 
 #navbar{
     background-image: linear-gradient(to right, #02405983, #b5babb79);
-    display: flex;
     width: 100%;
     height: 12%;
     min-height: 20px;
     opacity: 100%;
     position: fixed;
     z-index: 20;
-    justify-content: right;
     border-radius: 0px 0px 20px 20px;
 }
 
 #menu {
-    list-style: none;
     display: flex;
-    height: 100%;
-    justify-content: right;
-    gap: 30%;
+    list-style: none;
     margin-right: 10%;
+    float: right;
+    width: 30%;
+    gap: 30px;
+    align-items: center;
+    height: 100%;
+    
 }
 
 #menu li{
-    height: 100%;
-    width: 30%;
+    display: inline;
 }
 
 #nav-logo {
@@ -45,22 +45,19 @@ main {
 }
 
 #menu button {
-    width: 100%;
-    height: 100%;
     cursor: pointer;
     background: none;
     border: none;
-
+    border-radius: 15px;
+    padding: 25px 10px;
+    font-size: 1.3em;
 }
-
-#menu button h1 {
-
-    font-size: 1.3em
-    }
 
 #menu button:hover {
     transition: .3s;
-    border-bottom: 1px solid rgb(187, 162, 53)
+    background-color: rgba(55, 63, 61, 0.76);
+    color: #fff;
+    
 }
 
 #reservaBtn {
