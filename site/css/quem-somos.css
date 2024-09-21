@@ -13,4 +13,29 @@ section {
     background-color: #fff;
     width: 80%;
     border-radius: 20px;
+    padding: 25px;
+}
+
+.tela-membro {
+    border-radius: 25px;
+    padding: 20px;
+    background-color: yellow;
+    height: 40%;
+    width: 25%;
+}
+
+.foto-membro{
+    border: 1px solid red;
+}
+
+.tela-membro p {
+    width: 100%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
