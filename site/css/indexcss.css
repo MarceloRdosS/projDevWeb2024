@@ -57,11 +57,9 @@ main {
     font-size: 1.3em;
 }
 
-#menu button:hover, #footer-menu a:hover, #footer-social li:hover{
-    transition: .3s;
-    background-color: rgba(240, 248, 255, 0.247);
-    color: #fff;
-    
+#menu button:hover, #footer-menu a:hover, #footer-social li:hover {
+    color: #67b2f0;
+    list-style-type: none;
 }
 
 #footer-top {
