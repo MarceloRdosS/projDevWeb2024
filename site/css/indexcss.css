@@ -172,3 +172,155 @@ footer > div + div {
 		height: 40px;
 	}
 }
+
+@media only screen and (max-width: 1024px) {
+	#menu {
+		padding: 0;
+		margin: 0 auto;
+		float: none;
+	}
+	main {
+		background-position: 50%;
+	}
+	#footer-top {
+		gap: 10%;
+	}
+	.footer-social-img {
+		height: 40px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.logoImg {
+		visibility: hidden;
+	}
+	#navbar {
+		height: 460px;
+		position: absolute;
+		top: 0%;
+	}
+	#menu {
+		margin: 0 auto;
+		float: none;
+		flex-direction: column;
+	}
+	#nav-logo {
+		left: 0%;
+		margin: 0 auto;
+		position: relative;
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.logoImg {
+		visibility: hidden;
+	}
+	#navbar {
+		height: 460px;
+		position: absolute;
+		top: 0%;
+	}
+	#menu {
+		margin: 0 auto;
+		float: none;
+		flex-direction: column;
+	}
+	#nav-logo {
+		left: 0%;
+		margin: 0 auto;
+		position: relative;
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#navbar {
+		height: 460px;
+		position: absolute;
+		top: 0%;
+	}
+	#menu {
+		margin: 0 auto;
+		float: none;
+		flex-direction: column;
+	}
+	#nav-logo {
+		margin: 0 auto;
+		position: relative;
+		height: 100px;
+		left: 0%;
+	}
+	main {
+		background-image: url("../img/mainImg.jpg");
+		background-size: cover;
+		background-position: 50%;
+		height: 500px;
+	}
+
+	footer {
+		height: 400px;
+	}
+
+	#footer-social-ul {
+		gap: 0;
+	}
+
+	#footer-top {
+		background-image: linear-gradient(
+			to right,
+			rgb(2, 64, 89),
+			rgb(181, 186, 187)
+		);
+		display: flex;
+		flex-direction: column;
+	}
+	.logoImg {
+		visibility: hidden;
+	}
+}
+@media screen and (max-width: 320px) {
+	#navbar {
+		height: 460px;
+		position: absolute;
+		top: 0%;
+	}
+	#menu {
+		margin: 0 auto;
+		float: none;
+		flex-direction: column;
+	}
+	#nav-logo {
+		margin: 0 auto;
+		position: relative;
+		height: 100px;
+		left: 0%;
+	}
+	main {
+		background-image: url("../img/mainImg.jpg");
+		background-size: cover;
+		background-position: 50%;
+	}
+
+	footer {
+		margin-top: 0;
+		height: 400px;
+	}
+
+	#footer-social-ul {
+		gap: 0;
+	}
+
+	#footer-top {
+		background-image: linear-gradient(
+			to right,
+			rgb(2, 64, 89),
+			rgb(181, 186, 187)
+		);
+		display: flex;
+		flex-direction: column;
+	}
+	.logoImg {
+		visibility: hidden;
+	}
+}
