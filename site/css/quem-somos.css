@@ -195,6 +195,46 @@ section {
 	color: black;
 }
 
+#footer-insta,
+#footer-youtube,
+#footer-tiktok,
+#footer-facebook {
+	height: 50px;
+	width: 50px;
+}
+
+#footer-insta {
+	background: url("../img/icon-insta-yellow.png");
+}
+
+#footer-youtube {
+	background: url("../img/icon-youtube-yellow.png");
+}
+
+#footer-tiktok {
+	background: url("../img/icon-tiktok-yellow.png");
+}
+
+#footer-facebook {
+	background: url("../img/icon-facebook-yellow.png");
+}
+
+#footer-insta:hover {
+	background: url("../img/icon-insta-blue.png");
+}
+
+#footer-youtube:hover {
+	background: url("../img/icon-youtube-blue.png");
+}
+
+#footer-tiktok:hover {
+	background: url("../img/icon-tiktok-blue.png");
+}
+
+#footer-facebook:hover {
+	background: url("../img/icon-facebook-blue.png");
+}
+
 @media only screen and (max-width: 1800px) {
 	#footer-top {
 		gap: 10%;
