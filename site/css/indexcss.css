@@ -8,9 +8,9 @@
 	user-select: none;
 }
 
-main {
-	position: absolute;
-	width: 100%;
+html,
+body {
+	min-height: 100%;
 	height: 100%;
 }
 
@@ -113,7 +113,7 @@ footer #footer-bottom .copyright-text {
 	text-align: center;
 }
 
-header {
+main {
 	position: relative;
 	display: flex;
 	background-image: url("../img/mainImg.jpg");
