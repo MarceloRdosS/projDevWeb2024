@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: "Roboto", sans-serif;
-	color: gold;
 	list-style: none;
 	text-decoration: none;
 	user-select: none;
@@ -119,7 +118,7 @@ main {
 	background-image: url("../img/mainImg.jpg");
 	background-size: cover;
 	width: 100%;
-	height: 100%;
+	height: 120%;
 }
 
 .logo {
@@ -133,12 +132,6 @@ main {
 .logoImg {
 	height: auto;
 	width: 100%;
-}
-
-section {
-	display: flex;
-	justify-content: center;
-	background-color: antiquewhite;
 }
 
 #conteudo {
@@ -162,6 +155,70 @@ footer {
 
 footer > div + div {
 	margin-top: 0px;
+}
+
+section {
+	display: flex;
+	align-items: center;
+	background-image: url("../img/section-img.jpg");
+	background-size: cover;
+	height: 1000px;
+}
+
+#info {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin: 0 auto;
+	height: 70%;
+	width: 70%;
+}
+
+#map {
+	z-index: 0;
+	height: 80%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#info-content {
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 30%;
+	background-color: aliceblue;
+	border-radius: 20px;
+	height: 20%;
+}
+
+#info-content a {
+	color: black;
+}
+
+#info-content h1 {
+	font-weight: 900;
+	font-size: 1.75em;
+	width: 100%;
+	border-bottom: 1px solid gold;
+	text-shadow: 0.5px 0.5px rgba(156, 140, 45, 0.616);
+}
+
+#map b {
+	color: #67b2f0;
+	font-family: "Dancing Script";
+	font-size: 2em;
+	text-shadow: 0.5px 0.5px #4c80aa8c;
+}
+
+nav button,
+#footer-top a,
+.copyright-text,
+#info-content h1 {
+	color: gold;
 }
 
 #footer-insta,
@@ -250,6 +307,20 @@ footer > div + div {
 		position: relative;
 		height: 100px;
 	}
+	#info-content {
+		width: 90%;
+		flex-direction: column;
+		gap: 20px;
+		border-radius: 20px;
+		height: 30%;
+	}
+	#info {
+		width: 100%;
+	}
+	#map {
+		width: 95%;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -271,6 +342,20 @@ footer > div + div {
 		margin: 0 auto;
 		position: relative;
 		height: 100px;
+	}
+	#info-content {
+		width: 90%;
+		flex-direction: column;
+		gap: 20px;
+		border-radius: 20px;
+		height: 30%;
+	}
+	#info {
+		width: 100%;
+	}
+	#map {
+		width: 95%;
+		margin: 0 auto;
 	}
 }
 
@@ -318,6 +403,17 @@ footer > div + div {
 	.logoImg {
 		visibility: hidden;
 	}
+	#info-content {
+		width: 90%;
+		border-radius: 20px;
+	}
+	#info {
+		width: 100%;
+	}
+	#map {
+		width: 95%;
+		margin: 0 auto;
+	}
 }
 @media screen and (max-width: 320px) {
 	#navbar {
@@ -362,5 +458,16 @@ footer > div + div {
 	}
 	.logoImg {
 		visibility: hidden;
+	}
+	#info-content {
+		width: 90%;
+		border-radius: 20px;
+	}
+	#info {
+		width: 100%;
+	}
+	#map {
+		width: 95%;
+		margin: 0 auto;
 	}
 }
