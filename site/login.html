@@ -14,8 +14,16 @@
 	<body>
 		<nav id="navbar">
 			<a href="./index.html"
-				><img src="./img/logoimg-no-undertext.png" id="nav-logo" alt=""
-			/></a>
+				><img src="./img/logoimg-no-undertext.png" id="nav-logo" alt=""/></a>
+				<form action="login.php" method="post">
+					<label for="usuario">Usuário:</label>
+					<input type="text" id="usuario" name="usuario" required><br><br>
+					
+					<label for="senha">Senha:</label>
+					<input type="password" id="senha" name="senha" required><br><br>
+					
+					<input type="submit" value="Entrar">
+				  </form>
 		</nav>
 		<main></main>
 		<footer>
