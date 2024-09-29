@@ -1,69 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="esquerda-nav">
-                <div class="nav-logo">
-                    <a href="index.html"><img src="./img/logoimg-no-undertext.png" alt=""></a>
-                </div>
-                <div class="barra_dividir_logo"></div>
-                <a href="index.html" class="voltar">Voltar ao Início</a>
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<main class="login-principal">
+			<h1># FAÇA O LOGIN</h1>
+			<form class="login-formulario">
+				<label for="email">Email:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Seu email"
+					required
+				/>
 
-        </nav>
-    </header>
+				<label for="senha">Senha:</label>
+				<input
+					type="password"
+					id="senha"
+					name="senha"
+					placeholder="Sua senha"
+					required
+				/>
 
-    <main class="login-principal">
-        <h1># FAÇA O LOGIN</h1>
-        <form class="login-formulario">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Seu email" required>
+				<p class="esqueceu-senha">
+					<a href="recuperar-senha.html">Esqueceu sua senha?</a>
+				</p>
 
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
-
-            <p class="esqueceu-senha"><a href="recuperar-senha.html">Esqueceu sua senha?</a></p>
-
-            <button type="submit">ENTRAR</button>
-        </form>
-        <p class="registro"><a href="registro.html">Não tem uma conta? Registre-se aqui!</a></p>
-    </main>
-
-    <footer>
-        <div id="footer-top">
-            <ul id="footer-menu">
-                <li><a href="./quem-somos.html">Quem Somos</a></li>
-                <li><a href="./fale-conosco.html">Fale Conosco</a></li>
-                <li><a href="">Trabalhe Conosco</a></li>
-            </ul>
-            <ul id="footer-social-ul">
-                <li id="footer-insta">
-                    <a href="https://www.instagram.com/quiosquemoana/"><img class="footer-social-img" src="./img/icon-insta-yellow.png" alt="Instagram"></a>
-                </li>
-                <li id="footer-tiktok">
-                    <a href="https://www.tiktok.com"><img class="footer-social-img" src="./img/icon-tiktok-yellow.png" alt="TikTok"></a>
-                </li>
-                <li id="footer-facebook">
-                    <a href="https://www.facebook.com"><img class="footer-social-img" src="./img/icon-facebook-yellow.png" alt="Facebook"></a>
-                </li>
-                <li id="footer-youtube">
-                    <a href="https://www.youtube.com"><img class="footer-social-img" src="./img/icon-youtube-yellow.png" alt="Youtube"></a>
-                </li>
-            </ul>
-        </div>
-        <hr />
-        <div id="footer-bottom">
-            <p class="copyright-text">
-                Copyright © 2024 Quiosque Moana Todos os direitos reservados. Todas as marcas registradas são propriedade dos seus respectivos donos.
-            </p>
-        </div>
-    </footer>
-</body>
+				<button type="submit">ENTRAR</button>
+			</form>
+			<p class="registro">
+				<a href="registro.html">Não tem uma conta? Registre-se aqui!</a>
+			</p>
+		</main>
+	</body>
 </html>
