@@ -200,11 +200,12 @@ section {
 }
 
 #info-content h1 {
+	color: #67b2f0;
 	font-weight: 900;
 	font-size: 1.75em;
 	width: 100%;
-	border-bottom: 1px solid gold;
-	text-shadow: 0.5px 0.5px rgba(156, 140, 45, 0.616);
+	border-bottom: 1px solid #67b2f0;
+	text-shadow: 1px 1px rgba(23, 82, 77, 0.616);
 }
 
 #map b {
@@ -216,8 +217,7 @@ section {
 
 nav button,
 #footer-top a,
-.copyright-text,
-#info-content h1 {
+.copyright-text {
 	color: gold;
 }
 
