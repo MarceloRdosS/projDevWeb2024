@@ -18,48 +18,62 @@ body {
 	overflow-x: hidden;
 }
 
-#navbar {
-	background-image: linear-gradient(to right, #02405983, #b5babb79);
-	width: 100%;
-	min-height: 50px;
-	opacity: 100%;
-	position: fixed;
-	z-index: 20;
-	border-radius: 0px 0px 20px 20px;
+header {
+		position: sticky;
+		top: 0;
+		z-index: 1000; 
+		background-image: linear-gradient(to left, rgb(18, 80, 105), rgb(30, 77, 87));
+		padding: 10px 0;
+	
 }
 
-#menu {
+.navbar {
 	display: flex;
-	list-style: none;
-	margin-right: 5%;
-	float: right;
-	width: 30%;
-	gap: 30px;
+	justify-content: space-between;
 	align-items: center;
-	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
-#menu li {
-	display: inline;
-}
-
-#nav-logo {
-	position: absolute;
-	height: 90%;
+.esquerda-nav {
 	display: flex;
-	top: 1%;
+	align-items: center;
 }
 
-#menu button {
-	cursor: pointer;
-	background: none;
-	border: none;
-	border-radius: 15px;
-	padding: 25px 10px;
-	font-size: 1.3em;
+.nav-logo img {
+	height: 80px;
+	width: auto;
 }
 
-#menu button:hover,
+.barra_dividir_logo {
+	width: 1px;
+	height: 40px;
+	background-color: white;
+	margin: 0 20px;
+}
+
+.voltar {
+	color: gold;
+	font-size: 18px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.voltar:hover {
+	color: #67b2f0;
+}
+
+.entrar {
+	color: gold;
+	font-size: 18px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.entrar:hover {
+	color: #67b2f0;
+}
 #footer-menu a:hover,
 #footer-social-ul li:hover {
 	color: #67b2f0;
@@ -151,7 +165,20 @@ footer > div + div {
 	align-items: center;
 	background-image: url("../img/quem-somos-mainIMG.jpg");
 	background-size: cover;
+	background-position: center;
 }
+
+#footer-insta,
+#footer-youtube,
+#footer-tiktok,
+#footer-facebook {
+	height: 50px;
+	width: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 
 section {
 	display: flex;
@@ -174,7 +201,7 @@ section {
 }
 
 .foto-membro {
-	width: 90%;
+	width: 70%;
 	height: auto;
 	border-radius: 20px;
 }
@@ -188,11 +215,14 @@ section {
 }
 
 .membro-texto h1 {
-	text-shadow: 2px 2px rgba(90, 90, 79, 0.295);
-	font-family: "Times New Roman", Times, serif;
-	text-align: center;
-	margin-bottom: 10px;
-	font-size: 2em;
+		line-height: .4166666em;
+		font-family: "Have Heart Two", "Have Heart Fallback", sans-serif;
+		font-size: 1.5em; 
+		font-weight: bold;
+		text-transform: uppercase; 
+		color: goldenrod;
+		margin: 20px 0; 
+	
 }
 
 .membro-texto p {
