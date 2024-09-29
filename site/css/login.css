@@ -1,364 +1,190 @@
 * {
-	padding: 0;
-	margin: 0;
-	font-family: "Roboto", sans-serif;
-	color: gold;
-	list-style: none;
-	text-decoration: none;
-	user-select: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
-html,
 body {
-	min-height: 100%;
-	height: 100%;
+    font-family: "Arial", sans-serif;
+    background-color: #d1e3f3;
+    color: #333;
 }
 
-#navbar {
-	background-image: linear-gradient(to right, #02405983, #b5babb79);
-	width: 100%;
-	height: 12%;
-	min-height: 20px;
-	opacity: 100%;
-	position: fixed;
-	z-index: 20;
-	border-radius: 0px 0px 20px 20px;
+header {
+    background-image: linear-gradient(to left, rgb(18, 80, 105), rgb(30, 77, 87));
+    padding: 10px 0;
 }
 
-#menu {
-	display: flex;
-	list-style: none;
-	margin-right: 10%;
-	float: right;
-	width: 30%;
-	gap: 30px;
-	align-items: center;
-	height: 100%;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-#menu li {
-	display: inline;
+.esquerda-nav {
+    display: flex;
+    align-items: center;
 }
 
-#nav-logo {
-	position: absolute;
-	left: 3%;
-	height: 90%;
-	display: flex;
-	margin-top: 0.3%;
+.nav-logo img {
+    height: 80px;
+    width: auto;
 }
 
-#menu button {
-	cursor: pointer;
-	background: none;
-	border: none;
-	border-radius: 15px;
-	padding: 25px 10px;
-	font-size: 1.3em;
+.barra_dividir_logo {
+    width: 1px;
+    height: 40px;
+    background-color: white;
+    margin: 0 20px;
 }
 
-#menu button:hover,
-#footer-menu a:hover,
-#footer-social-ul li:hover {
-	color: #67b2f0;
-	list-style-type: none;
+.voltar, .entrar {
+    color: gold;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-footer a {
-	display: block;
+.voltar:hover, .entrar:hover {
+    color: #67b2f0;
+}
+
+.login-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: calc(100vh - 100px); /* Ajusta a altura para deixar espaço para o header e footer */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #024059;
+}
+
+.login-formulario {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Largura do formulário */
+    display: flex;
+    flex-direction: column;
+}
+
+.login-formulario label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.login-formulario input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%; /* Faz o input ocupar toda a largura do formulário */
+}
+
+.login-formulario button {
+    padding: 10px;
+    background-color: #024059;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-formulario button:hover {
+    background-color: #067a8e;
+}
+
+.esqueceu-senha {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 10px; /* Adiciona um espaço em cima */
+    margin-bottom: 20px; /* Adiciona mais espaço abaixo */
+}
+
+.esqueceu-senha a {
+    color: black; /* Altera a cor do link para preto */
+}
+
+.registro {
+    margin-top: 15px; /* Espaço entre o formulário e o link de registro */
+    text-align: center; /* Centraliza o texto */
+}
+
+.registro a {
+    color: black; /* Altera a cor do link para preto */
+}
+
+footer {
+    width: 100%;
+    height: 15%;
 }
 
 #footer-top {
-	background-image: linear-gradient(
-		to right,
-		rgb(2, 64, 89),
-		rgb(181, 186, 187)
-	);
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	gap: 35%;
+    background-image: linear-gradient(to right, rgb(2, 64, 89), rgb(181, 186, 187));
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50%;
 }
 
 #footer-menu {
-	display: flex;
-	gap: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 #footer-social-ul {
-	display: flex;
-	gap: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 #footer-social-ul li,
 #footer-menu a {
-	padding: 10px;
-	border-radius: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: gold;
+    text-decoration: none;
 }
 
 #footer-bottom {
-	clear: both;
-	display: flex;
-	background-color: rgb(37, 37, 38);
-	height: 30%;
-	justify-content: center;
-	align-items: center;
+    clear: both;
+    display: flex;
+    background-color: rgb(37, 37, 38);
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 footer #footer-bottom .copyright-text {
-	font-size: 0.9em;
-	font-weight: 500;
-	text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+    color: gold;
 }
 
-main {
-	position: relative;
-	display: flex;
-	width: 100%;
-	height: 100%;
-}
-
-.logo {
-	margin: 0 auto;
-	position: relative;
-	top: 10%;
-	width: 20%;
-	height: 30%;
-}
-
-.logoImg {
-	height: auto;
-	width: 100%;
-}
-
-section {
-	display: flex;
-	justify-content: center;
-	background-color: antiquewhite;
-}
-
-#conteudo {
-	background-color: white;
-	text-align: center;
-	height: 1300px;
-	width: 70%;
-}
-
-footer {
-	width: 100%;
-	height: 15%;
-}
-
-.texto1 {
-	color: darkred;
-	text-align: center;
-	font-style: initial;
-	font-size: 20px;
-}
-
-footer > div + div {
-	margin-top: 0px;
-}
-
-#footer-insta,
-#footer-youtube,
-#footer-tiktok,
-#footer-facebook {
-	height: 50px;
-	width: 50px;
-}
-
-#footer-insta {
-	background: url("../img/icon-insta-yellow.png");
-}
-
-#footer-youtube {
-	background: url("../img/icon-youtube-yellow.png");
-}
-
-#footer-tiktok {
-	background: url("../img/icon-tiktok-yellow.png");
-}
-
-#footer-facebook {
-	background: url("../img/icon-facebook-yellow.png");
-}
-
-#footer-insta:hover {
-	background: url("../img/icon-insta-blue.png");
-}
-
-#footer-youtube:hover {
-	background: url("../img/icon-youtube-blue.png");
-}
-
-#footer-tiktok:hover {
-	background: url("../img/icon-tiktok-blue.png");
-}
-
-#footer-facebook:hover {
-	background: url("../img/icon-facebook-blue.png");
+.copyright-text {
+    font-size: 0.9em;
 }
 
 @media only screen and (max-width: 1800px) {
-	#footer-top {
-		gap: 10%;
-	}
-	.footer-social-img {
-		height: 40px;
-	}
-}
-
-@media only screen and (max-width: 1024px) {
-	#menu {
-		padding: 0;
-		margin: 0 auto;
-		float: none;
-	}
-	main {
-		background-position: 50%;
-	}
-	#footer-top {
-		gap: 10%;
-	}
-	.footer-social-img {
-		height: 40px;
-	}
-}
-
-@media screen and (max-width: 800px) {
-	.logoImg {
-		visibility: hidden;
-	}
-	#navbar {
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
-	#nav-logo {
-		left: 0%;
-		margin: 0 auto;
-		position: relative;
-		height: 100px;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.logoImg {
-		visibility: hidden;
-	}
-	#navbar {
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
-	#nav-logo {
-		left: 0%;
-		margin: 0 auto;
-		position: relative;
-		height: 100px;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	#navbar {
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
-	#nav-logo {
-		margin: 0 auto;
-		position: relative;
-		height: 100px;
-		left: 0%;
-	}
-	main {
-		background-image: url("../img/mainImg.jpg");
-		background-size: cover;
-		background-position: 50%;
-		height: 500px;
-	}
-
-	footer {
-		height: 400px;
-	}
-
-	#footer-social-ul {
-		gap: 0;
-	}
-
-	#footer-top {
-		background-image: linear-gradient(
-			to right,
-			rgb(2, 64, 89),
-			rgb(181, 186, 187)
-		);
-		display: flex;
-		flex-direction: column;
-	}
-	.logoImg {
-		visibility: hidden;
-	}
-}
-@media screen and (max-width: 320px) {
-	#navbar {
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
-	#nav-logo {
-		margin: 0 auto;
-		position: relative;
-		height: 100px;
-		left: 0%;
-	}
-	main {
-		background-image: url("../img/mainImg.jpg");
-		background-size: cover;
-		background-position: 50%;
-	}
-
-	footer {
-		margin-top: 0;
-		height: 400px;
-	}
-
-	#footer-social-ul {
-		gap: 0;
-	}
-
-	#footer-top {
-		background-image: linear-gradient(
-			to right,
-			rgb(2, 64, 89),
-			rgb(181, 186, 187)
-		);
-		display: flex;
-		flex-direction: column;
-	}
-	.logoImg {
-		visibility: hidden;
-	}
+    #footer-top {
+        gap: 10%;
+    }
+    .footer-social-img {
+        height: 40px;
+    }
 }
