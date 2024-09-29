@@ -278,7 +278,7 @@ nav button,
 	}
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1126px) {
 	#menu {
 		padding: 0;
 		margin: 0 auto;
@@ -292,6 +292,10 @@ nav button,
 	}
 	.footer-social-img {
 		height: 40px;
+	}
+
+	#info-content {
+		height: 250px;
 	}
 }
 
