@@ -15,53 +15,53 @@ body {
 }
 
 #navbar {
-    background-image: linear-gradient(to right, #02405983, #b5babb79);
-    width: 100%;
-    height: 80px;
-    opacity: 1;
-    position: fixed;
-    z-index: 20;
-    border-radius: 0px 0px 20px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	background-image: linear-gradient(to right, #02405983, #b5babb79);
+	width: 100%;
+	height: 80px;
+	opacity: 1;
+	position: fixed;
+	z-index: 20;
+	border-radius: 0px 0px 20px 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #menu {
-    display: flex;
-    list-style: none;
-    margin-right: 10%;
-    float: right;
-    width: 40%;
-    gap: 30px;
-    align-items: center;
-    height: 100%;
+	display: flex;
+	list-style: none;
+	margin-right: 10%;
+	float: right;
+	width: 40%;
+	gap: 30px;
+	align-items: center;
+	height: 100%;
 }
 
 #menu li {
-    display: inline;
+	display: inline;
 }
 
 #nav-logo {
-    position: absolute;
-    left: 3%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: 0;
+	position: absolute;
+	left: 3%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin-top: 0;
 }
 
 #menu button {
-    cursor: pointer;
-    background: none;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    transition: background 0.3s, color 0.3s;
+	cursor: pointer;
+	background: none;
+	border: none;
+	border-radius: 15px;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	transition: background 0.3s, color 0.3s;
 }
 
 #menu button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #3269ce;
+	background: rgba(255, 255, 255, 0.2);
+	color: #3269ce;
 }
 
 #footer-menu a:hover,
@@ -170,8 +170,9 @@ section {
 	background-image: url("../img/section-img.jpg");
 	background-size: cover;
 	height: 1000px;
+	font-family: "Montserrat";
+	color: #2c3e50;
 }
-
 #info {
 	text-align: center;
 	display: flex;
@@ -200,11 +201,10 @@ section {
 	background-color: aliceblue;
 	border-radius: 20px;
 	height: 20%;
-	
 }
 
 #info-content a {
-	color: black;
+	color: #2c3e50;
 }
 
 #info-content h1 {
@@ -480,10 +480,9 @@ nav button,
 	}
 }
 #inf-add {
-		text-align: center;
-		font-family: 'Dancing Script', cursive; 
-		font-size: 2.5em; 
-		color: #2C3E50; 
-		margin: 20px 0; 
-	
+	text-align: center;
+	font-family: "Dancing Script", cursive;
+	font-size: 2.5em;
+	color: #2c3e50;
+	margin: 20px 0;
 }

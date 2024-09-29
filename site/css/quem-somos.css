@@ -19,12 +19,11 @@ body {
 }
 
 header {
-		position: sticky;
-		top: 0;
-		z-index: 1000; 
-		background-image: linear-gradient(to left, rgb(18, 80, 105), rgb(30, 77, 87));
-		padding: 10px 0;
-	
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-image: linear-gradient(to left, rgb(18, 80, 105), rgb(30, 77, 87));
+	padding: 10px 0;
 }
 
 .navbar {
@@ -179,7 +178,6 @@ footer > div + div {
 	background-position: center;
 }
 
-
 section {
 	display: flex;
 	flex-direction: column;
@@ -215,14 +213,13 @@ section {
 }
 
 .membro-texto h1 {
-		line-height: .4166666em;
-		font-family: "Have Heart Two", "Have Heart Fallback", sans-serif;
-		font-size: 1.5em; 
-		font-weight: bold;
-		text-transform: uppercase; 
-		color: goldenrod;
-		margin: 20px 0; 
-	
+	line-height: 0.4166666em;
+	font-family: "Have Heart Two", "Have Heart Fallback", sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: goldenrod;
+	margin: 20px 0;
 }
 
 .membro-texto p {
@@ -280,6 +277,9 @@ section {
 	.footer-social-img {
 		height: 40px;
 	}
+	.membro-texto h1 {
+		line-height: normal;
+	}
 }
 
 @media screen and (max-width: 1666px) {
@@ -322,7 +322,7 @@ section {
 	section {
 		margin: 0;
 		background: none;
-		padding-top: 500px;
+		padding-top: 30px;
 		padding-left: 0;
 		width: 100%;
 		height: auto;
@@ -428,7 +428,7 @@ section {
 	section {
 		margin: 0;
 		background: none;
-		padding-top: 500px;
+		padding-top: 30px;
 		padding-left: 0;
 		width: 100%;
 		height: auto;
@@ -535,7 +535,7 @@ section {
 	section {
 		margin: 0;
 		background: none;
-		padding-top: 500px;
+		padding-top: 30px;
 		padding-left: 0;
 		width: 100%;
 		height: auto;
@@ -642,7 +642,7 @@ section {
 	section {
 		margin: 0;
 		background: none;
-		padding-top: 500px;
+		padding-top: 30px;
 		padding-left: 0;
 		width: 100%;
 		height: auto;
@@ -668,6 +668,7 @@ section {
 
 	.membro-texto h1 {
 		font-size: 1.7rem;
+		line-height: normal;
 	}
 
 	.foto-membro {
@@ -748,7 +749,7 @@ section {
 	section {
 		margin: 0;
 		background: none;
-		padding-top: 500px;
+		padding-top: 30px;
 		padding-left: 0;
 		width: 100%;
 		height: auto;
@@ -774,6 +775,7 @@ section {
 
 	.membro-texto h1 {
 		font-size: 1.7rem;
+		line-height: normal;
 	}
 
 	.foto-membro {
