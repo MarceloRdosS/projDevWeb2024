@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aventuras Espaciais!</title>
+    <link rel="stylesheet" href="\CSS\styles.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+        <div>
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div>
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" required />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sua Viagem Espacial</legend>
+        <div>
+          <label for="destino">Destino:</label>
+          <select id="destino" name="destino">
+            <option value="lua">Lua</option>
+            <option value="marte">Marte</option>
+            <option value="saturno">Saturno</option>
+            <option value="estrelas">As Estrelas!</option>
+          </select>
+        </div>
+        <div>
+          <label for="data-viagem">Data da Viagem:</label>
+          <input type="date" id="data-viagem" name="data-viagem" required />
+        </div>
+        <div>
+          <label for="duracao">Duração da Viagem (dias):</label>
+          <input type="number" id="duracao" name="duracao" required />
+          <output id="dias-em-anos"></output>
+        </div>
+        <script>
+          document
+            .getElementById("duracao")
+            .addEventListener("input", function () {
+              const duracao = parseInt(this.value);
+              document.getElementById("dias-em-anos").textContent =
+                "Equivalente a " +
+                (duracao / 365).toFixed(2) +
+                " anos terrestres.";
+            });
+        </script>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sua Missão</legend>
+        <div>
+          <label for="missao">Descreva sua missão espacial:</label>
+          <textarea id="missao" name="missao" required></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
