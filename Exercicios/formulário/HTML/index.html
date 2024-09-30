@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Ronaldo Candido" />
+    <meta name="description" content="Reserva Hotel Estaciano" />
+    <link href="\CSS\styles.css" rel="stylesheet" />
+    <title>Hotel Estaciano</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formulário de Reserva - Hotel Estaciano</h1>
+      <!-- Link abrindo em outra janela/guia -->
+      <a href="http://estacio.br" target="_blank">
+        <h3>Voltar para Estácio</h3>
+      </a>
+    </header>
+
+    <main>
+      <a name="topo">
+        <h2>Projeto</h2>
+      </a>
+      <!-- Imagem -->
+      <figure>
+        <figcaption>Rio de Janeiro</figcaption>
+        <img
+          src="\img\Rio_de_janeiro.jpeg"
+          alt="Foto das férias no Rio de Janeiro"
+        />
+      </figure>
+
+      <!-- Formulário usando Javascript-->
+      <form
+        action="#"
+        method="post"
+        oninput="total.value = (noites.valueAsNumber * 250) + ((hospede.valueAsNumber - 1) * 50)"
+      >
+        <fieldset>
+          <legend>Dados da reserva</legend>
+          <!-- container -->
+          <div class="campo">
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite o nome..."
+              style="width: 20em"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label>Sexo:</label>
+            <label class="checkbox">
+              <input
+                type="radio"
+                name="sexo"
+                value="masculino"
+                id="masculino"
+              />
+              Masculino
+            </label>
+            <label class="checkbox">
+              <input type="radio" name="sexo" value="feminino" id="feminino" />
+              Feminino
+            </label>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="campo">
+            <label for="email_repeti">Repita o e-mail:</label>
+            <input
+              type="email"
+              id="email_repeti"
+              name="email_repeti"
+              required
+              oninput="check(this)"
+            />
+          </div>
+          <div class="campo">
+            <label for="dt_chegada">Data de chegada:</label>
+            <input type="date" id="dt_chegada" name="dt_chegada" required />
+          </div>
+          <div class="campo">
+            <label for="noites">Número de noites (R$250,00 por noite):</label>
+            <input
+              type="number"
+              id="noites"
+              name="noites"
+              value="1"
+              min="1"
+              max="30"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="hospede"
+              >Número de hóspedes (R$50,00 adicional por noite):</label
+            >
+            <input
+              type="number"
+              id="hospede"
+              name="hospede"
+              value="1"
+              min="1"
+              max="4"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="total">Total estimado:</label>
+            R$<output id="total" name="total">250</output>.00
+          </div>
+          <div class="campo">
+            <label for="message">Mensagem</label>
+            <textarea
+              name="message"
+              id="message"
+              style="width: 40em"
+              placeholder="Algum comentário extra?"
+            ></textarea>
+          </div>
+          <div class="campo">
+            <label for="promo">Código promocional:</label>
+            <input
+              type="text"
+              id="promo"
+              name="promo"
+              maxlength="6"
+              pattern="[A-Za-z0-9]{6}"
+              title="Codigo promocional consiste em 6 caracteres alfanuméricos."
+            />
+          </div>
+          <div class="campo">
+            <label for="newsletter">Newsletter</label>
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                name="newsletter"
+                id="newsletter"
+                value="1"
+              />
+              Gostaria de receber a nossa Newsletter
+            </label>
+          </div>
+          <button class="botao submit" type="submit" name="submit">
+            Requerer reserva
+          </button>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer>
+      <a href="#topo"><p>Voltar ao início</p></a>
+    </footer>
+
+    <script>
+      // Função para verificar se o email repetido é igual ao email
+      function check(input) {
+        if (input.value != document.getElementById("email").value) {
+          input.setCustomValidity("Os emails devem ser iguais!");
+        } else {
+          input.setCustomValidity("");
+        }
+      }
+    </script>
+  </body>
+</html>

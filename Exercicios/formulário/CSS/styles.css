@@ -1,0 +1,108 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #fff;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+main {
+  background-color: #fff;
+  padding: 2em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+figure {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+fieldset {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.campo {
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+.checkbox {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.botao {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background-color: #45a049;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #fff;
+  margin-top: 1em;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
