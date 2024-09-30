@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: "Roboto", sans-serif;
-	color: gold;
 	list-style: none;
 	text-decoration: none;
 	user-select: none;
@@ -19,11 +18,18 @@ body {
 }
 
 header {
-	position: sticky;
+	width: 100%;
+	position: fixed;
 	top: 0;
 	z-index: 1000;
-	background-image: linear-gradient(to left, rgb(18, 80, 105), rgb(30, 77, 87));
+	background-image: linear-gradient(
+		to left,
+		rgba(18, 80, 105, 0.897),
+		rgba(30, 77, 87, 0.849)
+	);
 	padding: 10px 0;
+	border-radius: 0px 0px 20px 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -73,60 +79,6 @@ header {
 .entrar:hover {
 	color: #67b2f0;
 }
-#footer-menu a:hover,
-#footer-social-ul li:hover {
-	color: #67b2f0;
-	list-style-type: none;
-}
-
-footer a {
-	display: block;
-}
-
-#footer-top {
-	background-image: linear-gradient(
-		to right,
-		rgb(2, 64, 89),
-		rgb(181, 186, 187)
-	);
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	gap: 35%;
-}
-
-#footer-menu {
-	display: flex;
-	gap: 40px;
-}
-
-#footer-social-ul {
-	display: flex;
-	gap: 40px;
-}
-
-#footer-social-ul li,
-#footer-menu a {
-	padding: 10px;
-	border-radius: 10px;
-}
-
-#footer-bottom {
-	clear: both;
-	display: flex;
-	background-color: rgb(37, 37, 38);
-	height: 30%;
-	justify-content: center;
-	align-items: center;
-}
-
-footer #footer-bottom .copyright-text {
-	font-size: 0.9em;
-	font-weight: 500;
-	text-align: center;
-}
 
 .logo {
 	margin: 0 auto;
@@ -164,17 +116,6 @@ footer > div + div {
 	align-items: center;
 	background-image: url("../img/quem-somos-mainIMG.jpg");
 	background-size: cover;
-	background-position: center;
-}
-
-#footer-insta,
-#footer-youtube,
-#footer-tiktok,
-#footer-facebook {
-	height: 50px;
-	width: 50px;
-	background-size: cover;
-	background-repeat: no-repeat;
 	background-position: center;
 }
 
@@ -230,53 +171,7 @@ section {
 	color: black;
 }
 
-#footer-insta,
-#footer-youtube,
-#footer-tiktok,
-#footer-facebook {
-	height: 50px;
-	width: 50px;
-}
-
-#footer-insta {
-	background: url("../img/icon-insta-yellow.png");
-}
-
-#footer-youtube {
-	background: url("../img/icon-youtube-yellow.png");
-}
-
-#footer-tiktok {
-	background: url("../img/icon-tiktok-yellow.png");
-}
-
-#footer-facebook {
-	background: url("../img/icon-facebook-yellow.png");
-}
-
-#footer-insta:hover {
-	background: url("../img/icon-insta-blue.png");
-}
-
-#footer-youtube:hover {
-	background: url("../img/icon-youtube-blue.png");
-}
-
-#footer-tiktok:hover {
-	background: url("../img/icon-tiktok-blue.png");
-}
-
-#footer-facebook:hover {
-	background: url("../img/icon-facebook-blue.png");
-}
-
 @media only screen and (max-width: 1800px) {
-	#footer-top {
-		gap: 10%;
-	}
-	.footer-social-img {
-		height: 40px;
-	}
 	.membro-texto h1 {
 		line-height: normal;
 	}
@@ -320,7 +215,6 @@ section {
 		height: 100px;
 	}
 	section {
-		margin: 0;
 		background: none;
 		padding-top: 30px;
 		padding-left: 0;
@@ -384,148 +278,9 @@ section {
 		align-items: normal;
 		background: none;
 	}
-
-	footer {
-		height: 400px;
-	}
-
-	#footer-social-ul {
-		gap: 0;
-	}
-
-	#footer-top {
-		background-image: linear-gradient(
-			to right,
-			rgb(2, 64, 89),
-			rgb(181, 186, 187)
-		);
-		display: flex;
-		flex-direction: column;
-	}
 }
 
 @media screen and (max-width: 800px) {
-	body {
-		background: url("../img/quem-somos-mainIMG.jpg");
-		width: 100%;
-	}
-	#navbar {
-		width: 100%;
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
-	#nav-logo {
-		margin: 0 auto;
-		position: relative;
-		height: 100px;
-	}
-	section {
-		margin: 0;
-		background: none;
-		padding-top: 30px;
-		padding-left: 0;
-		width: 100%;
-		height: auto;
-	}
-
-	#section-area {
-		width: 100%;
-	}
-	.tela-membro {
-		background: none;
-		margin: 0 auto;
-		padding: 0;
-		width: 95%;
-		flex-direction: column;
-		margin-bottom: 15px;
-	}
-
-	.membro-texto {
-		margin: 0;
-		width: 96%;
-		height: 100%;
-	}
-
-	.membro-texto h1 {
-		font-size: 1.7rem;
-	}
-
-	.foto-membro {
-		width: 0;
-		height: 0;
-		visibility: hidden;
-	}
-
-	#resp-img01,
-	#resp-img02,
-	#resp-img03 {
-		margin: 0;
-		width: 100%;
-		height: 450px;
-		border-radius: 20px;
-		margin-bottom: 5px;
-	}
-
-	#resp-img01 {
-		background: no-repeat url(../img/quem-somos01.jpg);
-		background-size: 100%;
-	}
-	#resp-img02 {
-		background: no-repeat url(../img/quem-somos02.jpg);
-		background-size: 100%;
-	}
-	#resp-img03 {
-		background: no-repeat url(../img/quem-somos03.jpg);
-		background-size: 100%;
-	}
-	#section-area {
-		display: block;
-		justify-content: center;
-		align-items: normal;
-		background: none;
-	}
-
-	footer {
-		height: 400px;
-	}
-
-	#footer-social-ul {
-		gap: 0;
-	}
-
-	#footer-top {
-		background-image: linear-gradient(
-			to right,
-			rgb(2, 64, 89),
-			rgb(181, 186, 187)
-		);
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	body {
-		background: url("../img/quem-somos-mainIMG.jpg");
-		width: 100%;
-	}
-	#navbar {
-		width: 100%;
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
 	#nav-logo {
 		right: 4%;
 		margin: 0 auto;
@@ -533,114 +288,7 @@ section {
 		height: 100px;
 	}
 	section {
-		margin: 0;
-		background: none;
-		padding-top: 30px;
-		padding-left: 0;
-		width: 100%;
-		height: auto;
-	}
-
-	#section-area {
-		width: 100%;
-	}
-	.tela-membro {
-		background: none;
-		margin: 0 auto;
-		padding: 0;
-		width: 95%;
-		flex-direction: column;
-		margin-bottom: 15px;
-	}
-
-	.membro-texto {
-		margin: 0;
-		width: 95%;
-		height: 100%;
-	}
-
-	.membro-texto h1 {
-		font-size: 1.7rem;
-	}
-
-	.foto-membro {
-		width: 0;
-		height: 0;
-		visibility: hidden;
-	}
-
-	#resp-img01,
-	#resp-img02,
-	#resp-img03 {
-		margin: 0;
-		width: 100%;
-		height: 300px;
-		border-radius: 20px;
-		margin-bottom: 5px;
-	}
-
-	#resp-img01 {
-		background: no-repeat url(../img/quem-somos01.jpg);
-		background-size: 100%;
-	}
-	#resp-img02 {
-		background: no-repeat url(../img/quem-somos02.jpg);
-		background-size: 100%;
-	}
-	#resp-img03 {
-		background: no-repeat url(../img/quem-somos03.jpg);
-		background-size: 100%;
-	}
-	#section-area {
-		display: block;
-		justify-content: center;
-		align-items: normal;
-		background: none;
-	}
-
-	footer {
-		height: 400px;
-	}
-
-	#footer-social-ul {
-		gap: 0;
-	}
-
-	#footer-top {
-		background-image: linear-gradient(
-			to right,
-			rgb(2, 64, 89),
-			rgb(181, 186, 187)
-		);
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	body {
-		background: url("../img/quem-somos-mainIMG.jpg");
-		width: 100%;
-	}
-	#navbar {
-		width: 100%;
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
-	#nav-logo {
-		right: 4%;
-		margin: 0 auto;
-		position: relative;
-		height: 100px;
-	}
-	section {
-		margin: 0;
+		margin-top: 30%;
 		background: none;
 		padding-top: 30px;
 		padding-left: 0;
@@ -705,49 +353,163 @@ section {
 		align-items: normal;
 		background: none;
 	}
+}
 
-	footer {
-		height: 400px;
+@media screen and (max-width: 600px) {
+	#nav-logo {
+		right: 4%;
+		margin: 0 auto;
+		position: relative;
+		height: 100px;
+	}
+	section {
+		background: none;
+		padding-top: 30px;
+		padding-left: 0;
+		width: 100%;
+		height: auto;
 	}
 
-	#footer-social-ul {
-		gap: 0;
+	#section-area {
+		width: 100%;
 	}
-
-	#footer-top {
-		background-image: linear-gradient(
-			to right,
-			rgb(2, 64, 89),
-			rgb(181, 186, 187)
-		);
-		display: flex;
+	.tela-membro {
+		background: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 95%;
 		flex-direction: column;
+		margin-bottom: 15px;
+	}
+
+	.membro-texto {
+		margin: 0;
+		width: 95%;
+		height: 100%;
+	}
+
+	.membro-texto h1 {
+		font-size: 1.7rem;
+	}
+
+	.foto-membro {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+
+	#resp-img01,
+	#resp-img02,
+	#resp-img03 {
+		margin: 0;
+		width: 100%;
+		height: 300px;
+		border-radius: 20px;
+		margin-bottom: 5px;
+	}
+
+	#resp-img01 {
+		background: no-repeat url(../img/quem-somos01.jpg);
+		background-size: 100%;
+	}
+	#resp-img02 {
+		background: no-repeat url(../img/quem-somos02.jpg);
+		background-size: 100%;
+	}
+	#resp-img03 {
+		background: no-repeat url(../img/quem-somos03.jpg);
+		background-size: 100%;
+	}
+	#section-area {
+		display: block;
+		justify-content: center;
+		align-items: normal;
+		background: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#nav-logo {
+		right: 4%;
+		margin: 0 auto;
+		position: relative;
+		height: 100px;
+	}
+	section {
+		margin-top: 30%;
+		background: none;
+		padding-top: 30px;
+		padding-left: 0;
+		width: 100%;
+		height: auto;
+	}
+
+	#section-area {
+		width: 100%;
+	}
+	.tela-membro {
+		background: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 95%;
+		flex-direction: column;
+		margin-bottom: 15px;
+	}
+
+	.membro-texto {
+		margin: 0;
+		width: 95%;
+		height: 100%;
+	}
+
+	.membro-texto h1 {
+		font-size: 1.7rem;
+		line-height: normal;
+	}
+
+	.foto-membro {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+
+	#resp-img01,
+	#resp-img02,
+	#resp-img03 {
+		margin: 0;
+		width: 100%;
+		height: 240px;
+		border-radius: 20px;
+		margin-bottom: 5px;
+	}
+
+	#resp-img01 {
+		background: no-repeat url(../img/quem-somos01.jpg);
+		background-size: 100%;
+	}
+	#resp-img02 {
+		background: no-repeat url(../img/quem-somos02.jpg);
+		background-size: 100%;
+	}
+	#resp-img03 {
+		background: no-repeat url(../img/quem-somos03.jpg);
+		background-size: 100%;
+	}
+	#section-area {
+		display: block;
+		justify-content: center;
+		align-items: normal;
+		background: none;
 	}
 }
 
 @media screen and (max-width: 320px) {
-	body {
-		background: url("../img/quem-somos-mainIMG.jpg");
-		width: 100%;
-	}
-	#navbar {
-		width: 100%;
-		height: 460px;
-		position: absolute;
-		top: 0%;
-	}
-	#menu {
-		margin: 0 auto;
-		float: none;
-		flex-direction: column;
-	}
 	#nav-logo {
 		right: 3%;
 		position: relative;
 		height: 100px;
 	}
 	section {
-		margin: 0;
 		background: none;
 		padding-top: 30px;
 		padding-left: 0;
@@ -811,23 +573,5 @@ section {
 		justify-content: center;
 		align-items: normal;
 		background: none;
-	}
-
-	footer {
-		height: 400px;
-	}
-
-	#footer-social-ul {
-		gap: 0;
-	}
-
-	#footer-top {
-		background-image: linear-gradient(
-			to right,
-			rgb(2, 64, 89),
-			rgb(181, 186, 187)
-		);
-		display: flex;
-		flex-direction: column;
 	}
 }
