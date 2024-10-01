@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo05</title>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Informe seu nome");
+      window.alert("Que bom que esteja gostando do JS, " + nome);
+      var resp = window.confirm("Confirma " + nome + " ?");
+      if (resp == true) {
+        txt = "OK!";
+      } else {
+        txt = "Ah, mas vai melhorar!";
+      }
+      window.alert(txt);
+      document.write("<h1>Usuário: " + nome + "</h1>");
+    </script>
+  </body>
+</html>
