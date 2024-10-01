@@ -68,7 +68,7 @@ header {
 }
 
 h1 {
-	margin-top: 60px;
+	margin-top: 5px;
 	margin-bottom: 10px;
 	color: #024059;
 }
@@ -137,9 +137,8 @@ p {
 	color: black; /* Altera a cor do link para preto */
 }
 
-#radio-area {
-	display: flex;
-	flex-direction: row;
+#radioArea {
+	margin-bottom: 15px;
 }
 
 .radio-label {
@@ -162,6 +161,11 @@ p {
 	background-color: #024059;
 	color: white;
 	border-color: #325968;
+}
+
+#mensagem {
+	resize: none;
+	height: 75px;
 }
 
 @media screen and (max-width: 400px) {
