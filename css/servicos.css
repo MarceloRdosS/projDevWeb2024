@@ -65,9 +65,6 @@ header {
 	align-items: center;
 	justify-content: center;
 	flex: 1;
-	height: calc(
-		100vh - 100px
-	); /* Ajusta a altura para deixar espaço para o header e footer */
 }
 
 h1 {
@@ -165,4 +162,24 @@ p {
 	background-color: #024059;
 	color: white;
 	border-color: #325968;
+}
+
+@media screen and (max-width: 400px) {
+	h1,
+	p {
+		text-align: center;
+	}
+	.login-formulario {
+		width: 98%;
+	}
+	.radio-label {
+		width: 23%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.radio-label {
+		display: flex;
+		width: 100%;
+	}
 }

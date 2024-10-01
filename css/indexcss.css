@@ -30,7 +30,6 @@ body {
 	list-style: none;
 	margin-right: 10%;
 	float: right;
-	width: 40%;
 	gap: 30px;
 	align-items: center;
 	height: 100%;
@@ -166,7 +165,8 @@ nav button {
 @media only screen and (max-width: 1126px) {
 	#menu {
 		padding: 0;
-		margin: 0 auto;
+		display: flex;
+		justify-content: center;
 		float: none;
 	}
 	main {
@@ -178,7 +178,7 @@ nav button {
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
 	.logoImg {
 		visibility: hidden;
 	}
