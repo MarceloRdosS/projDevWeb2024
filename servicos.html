@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Faça O Seu Orçamento Grátis</title>
+		<link rel="stylesheet" href="css/servicos.css" />
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<main class="login-principal">
+			<h1>Peça o seu orçamento</h1>
+			<p>Faça o seu <b>orçamento grátis</b> e logo entraremos em contato</p>
+			<form class="login-formulario">
+				<label for="nomeCasal">Nome do Casal: <span class="red">*</span></label>
+				<input
+					type="text"
+					id="nomeCasal"
+					name="nomeCasal"
+					placeholder="Nomes Completos"
+					required
+				/>
+
+				<label for="email">Email: <span class="red">*</span></label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Email para Contato"
+					required
+				/>
+				<div id="telArea">
+					<label for="telefone">Telefone:</label>
+					<input
+						type="tel"
+						name="telefone"
+						id="telefone"
+						placeholder="Telefone para Contato"
+						maxlength="10"
+					/>
+					<label for="celular">Celular: <span class="red">*</span></label>
+					<input
+						type="tel"
+						name="celular"
+						id="celular"
+						placeholder="Celular para Contato"
+						required
+						maxlength="11"
+					/>
+				</div>
+				<div id="dataArea">
+					<label for="data">Data do evento:</label>
+					<input type="date" name="data" id="data" />
+				</div>
+				<label for="convidados">Número de convidados</label>
+				<div in="radioArea">
+					<input
+						type="radio"
+						id="0-100"
+						name="convidados"
+						class="radio-input"
+					/>
+					<label for="0-100" class="radio-label">0-100</label>
+
+					<input
+						type="radio"
+						id="100-150"
+						name="convidados"
+						class="radio-input"
+					/>
+					<label for="100-150" class="radio-label">100-150</label>
+
+					<input
+						type="radio"
+						id="150-200"
+						name="convidados"
+						class="radio-input"
+					/>
+					<label for="150-200" class="radio-label">150-200</label>
+
+					<input
+						type="radio"
+						id="200-250"
+						name="convidados"
+						class="radio-input"
+					/>
+					<label for="200-250" class="radio-label">200-250</label>
+				</div>
+
+				<button type="submit">Enviar Formulário</button>
+			</form>
+		</main>
+	</body>
+</html>
