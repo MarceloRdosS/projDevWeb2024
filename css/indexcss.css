@@ -140,7 +140,6 @@ section {
 	width: 30%;
 	background-color: aliceblue;
 	border-radius: 20px;
-	height: 20%;
 }
 
 #info-content a {
@@ -286,6 +285,7 @@ nav button {
 		width: 90%;
 		border-radius: 20px;
 	}
+
 	#info {
 		width: 100%;
 	}
