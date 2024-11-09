@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	background-color: #d1e3f3;
+	color: #333;
+}
+
+header {
+	background-image: linear-gradient(to left, rgb(18, 80, 105), rgb(30, 77, 87));
+	padding: 10px 0;
+}
+
+.red {
+	color: red;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.esquerda-nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav-logo img {
+	height: 80px;
+	width: auto;
+}
+
+.barra_dividir_logo {
+	width: 1px;
+	height: 40px;
+	background-color: white;
+	margin: 0 20px;
+}
+
+.voltar,
+.entrar {
+	color: gold;
+	font-size: 18px;
+	transition: color 0.3s ease;
+}
+
+.voltar:hover,
+.entrar:hover {
+	color: #67b2f0;
+}
+
+.login-principal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+
+h1 {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color: #024059;
+}
+
+p {
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.login-formulario {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	width: 400px; /* Largura do formulário */
+	display: flex;
+	flex-direction: column;
+}
+
+.login-formulario label {
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-align: left; /* Alinha o texto à esquerda */
+}
+
+.login-formulario input {
+	margin-bottom: 15px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 1em;
+	width: 100%; /* Faz o input ocupar toda a largura do formulário */
+}
+
+.login-formulario button {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #024059;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.login-formulario button:hover {
+	background-color: #067a8e;
+}
+
+.esqueceu-senha {
+	text-align: left; /* Alinha o texto à esquerda */
+	margin-top: 10px; /* Adiciona um espaço em cima */
+	margin-bottom: 20px; /* Adiciona mais espaço abaixo */
+}
+
+.esqueceu-senha a {
+	color: black; /* Altera a cor do link para preto */
+}
+
+.registro {
+	margin-top: 15px; /* Espaço entre o formulário e o link de registro */
+	text-align: center; /* Centraliza o texto */
+}
+
+.registro a {
+	color: black; /* Altera a cor do link para preto */
+}
+
+#radioArea {
+	margin-bottom: 15px;
+}
+
+.radio-label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24%;
+	height: 40px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.radio-input {
+	display: none;
+}
+
+.radio-input:checked + .radio-label {
+	background-color: #024059;
+	color: white;
+	border-color: #325968;
+}
+
+#mensagem {
+	resize: none;
+	height: 75px;
+}
+
+@media screen and (max-width: 400px) {
+	h1,
+	p {
+		text-align: center;
+	}
+	.login-formulario {
+		width: 98%;
+	}
+	.radio-label {
+		width: 23%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.radio-label {
+		display: flex;
+		width: 100%;
+	}
+}

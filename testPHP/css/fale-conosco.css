@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	background-color: #d1e3f3;
+	color: #333;
+}
+strong {
+	color: #292b2c;
+}
+
+header {
+	background-image: linear-gradient(to left, rgb(18, 80, 105), rgb(30, 77, 87));
+	padding: 10px 0;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.esquerda-nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav-logo img {
+	height: 80px;
+	width: auto;
+}
+
+.barra_dividir_logo {
+	width: 1px;
+	height: 40px;
+	background-color: white;
+	margin: 0 20px;
+}
+
+.voltar {
+	color: gold;
+	font-size: 18px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.voltar:hover {
+	color: #67b2f0;
+}
+
+.entrar {
+	color: gold;
+	font-size: 18px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.entrar:hover {
+	color: #67b2f0;
+}
+/* corpo do texto principal aqui, inicio do formulario */
+.contato-principal {
+	max-width: 800px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.contato-principal h1 {
+	font-size: 42px;
+	margin-bottom: 10px;
+	color: #292b2c;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.contato-principal p {
+	margin-bottom: 30px;
+	font-size: 18px;
+	color: #666;
+}
+
+.contato-formulario {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.contato-formulario label {
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: #292b2c;
+}
+
+.contato-formulario input,
+.contato-formulario textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.contato-formulario input:focus,
+.contato-formulario textarea:focus {
+	border-color: #67b2f0;
+	outline: none;
+}
+
+.contato-formulario button {
+	padding: 15px;
+	color: white;
+	background-color: #67b2f0;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	border: none;
+	border-radius: 4px;
+	font-size: 18px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.contato-formulario button:hover {
+	background-color: #3175ad;
+}
+
+#conteudo {
+	background-color: white;
+	text-align: center;
+	height: 1300px;
+	width: 70%;
+}
+
+#menu button {
+	cursor: pointer;
+	background: none;
+	border: none;
+	border-radius: 15px;
+	padding: 25px 10px;
+	font-size: 1.3em;
+}
+
+.logo {
+	margin: 0 auto;
+	position: relative;
+	top: 10%;
+	width: 20%;
+	height: 30%;
+}
+
+.logoImg {
+	height: auto;
+	width: 100%;
+}

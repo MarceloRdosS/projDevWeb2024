@@ -1,0 +1,138 @@
+#footer-menu a:hover,
+#footer-social-ul li:hover {
+	color: #67b2f0;
+	list-style-type: none;
+}
+
+footer a {
+	color: gold;
+	display: block;
+}
+
+#footer-top {
+	background-image: linear-gradient(
+		to right,
+		rgb(2, 64, 89),
+		rgb(181, 186, 187)
+	);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 35%;
+}
+
+#footer-menu {
+	display: flex;
+	gap: 40px;
+}
+
+#footer-social-ul {
+	display: flex;
+	gap: 40px;
+}
+
+#footer-social-ul li,
+#footer-menu a {
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#footer-bottom {
+	clear: both;
+	display: flex;
+	background-color: rgb(37, 37, 38);
+	height: 30%;
+	justify-content: center;
+	align-items: center;
+}
+
+footer #footer-bottom .copyright-text {
+	font-size: 0.9em;
+	font-weight: 500;
+	text-align: center;
+}
+
+footer {
+	height: 100px;
+	position: relative;
+	width: 100%;
+	color: gold;
+}
+
+footer > div + div {
+	margin-top: 0px;
+}
+
+#footer-insta,
+#footer-youtube,
+#footer-tiktok,
+#footer-facebook {
+	height: 50px;
+	width: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#footer-insta {
+	background: url("../img/icon-insta-yellow.png");
+}
+
+#footer-youtube {
+	background: url("../img/icon-youtube-yellow.png");
+}
+
+#footer-tiktok {
+	background: url("../img/icon-tiktok-yellow.png");
+}
+
+#footer-facebook {
+	background: url("../img/icon-facebook-yellow.png");
+}
+
+#footer-insta:hover {
+	background: url("../img/icon-insta-blue.png");
+}
+
+#footer-youtube:hover {
+	background: url("../img/icon-youtube-blue.png");
+}
+
+#footer-tiktok:hover {
+	background: url("../img/icon-tiktok-blue.png");
+}
+
+#footer-facebook:hover {
+	background: url("../img/icon-facebook-blue.png");
+}
+
+@media only screen and (max-width: 1800px) {
+	#footer-top {
+		gap: 10%;
+	}
+	.footer-social-img {
+		height: 40px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	footer {
+		height: 400px;
+	}
+
+	#footer-social-ul {
+		gap: 0;
+	}
+
+	#footer-top {
+		background-image: linear-gradient(
+			to right,
+			rgb(2, 64, 89),
+			rgb(181, 186, 187)
+		);
+		display: flex;
+		flex-direction: column;
+	}
+}
