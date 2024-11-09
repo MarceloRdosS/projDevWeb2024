@@ -9,7 +9,7 @@
 		/>
 		<meta name="keywords" content="Quiosque, Moana, evento, casamento, praia,
 		Recreio dos Bandeirantes, Rio de Janeiro, drinks, comida, ambiente tropical,
-		música ao vivo"" />
+		música ao vivo" />
 		<meta
 			name="author"
 			content="João Guilherme Bazeth Feistel Goulart, João Vitor da Silva, Luiz Paulo França Costa, Marcelo Ramos dos Santos, Matheus Silva Meirelles Moreno"
@@ -34,7 +34,7 @@
 	</head>
 	<body>
 		<nav id="navbar">
-			<a href="./index.html"
+			<a href="./index.php"
 				><img src="./img/logoimg-no-undertext.png" id="nav-logo" alt=""
 			/></a>
 			<ul id="menu">
@@ -79,8 +79,7 @@
 		</nav>
 		<main>
 			<figure class="logo">
-				<a href="../site/index.html"
-					><img src="./img/logoImg.png" alt="logo" class="logoImg"
+					><img src="../img/logoImg.png" alt="logo" class="logoImg" 
 				/></a>
 			</figure>
 		</main>
