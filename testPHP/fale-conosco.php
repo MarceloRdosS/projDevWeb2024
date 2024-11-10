@@ -32,8 +32,30 @@ return false;">Entrar</a>
         <h1>ENTRE EM CONTATO</h1>
         <br>
         <p>Entre em contato com a gente! Ficaremos felizes em responder suas perguntas ou receber sugestões. <strong>Não se esqueça de conferir seu e-mail e celular</strong></p>
-        </strong> </p>
-        <form class="contato-formulario">
+        <?php
+        include('conexao.php'); // Inclui o arquivo de conexão com o banco de dados
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $assunto = $_POST['assunto'];
+            $mensagem = $_POST['mensagem'];
+
+            // Inserir os dados na tabela usando prepared statements
+            $stmt = $conn->prepare("INSERT INTO tbcontato (nome, email, assunto, mensagem) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $nome, $email, $assunto, $mensagem);
+
+            if ($stmt->execute()) {
+                echo "<p>Mensagem enviada com sucesso!</p>";
+            } else {
+                echo "<p>Erro ao enviar mensagem: " . $stmt->error . "</p>";
+            }
+
+            $stmt->close();
+            $conn->close();
+        }
+        ?>
+        <form class="contato-formulario" action="fale-conosco.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
@@ -53,7 +75,7 @@ return false;">Entrar</a>
         <div id="footer-top">
             <ul id="footer-menu">
                 <li><a href="./quem-somos.html">Quem Somos</a></li>
-                <li><a href="./fale-conosco.html">Fale Conosco</a></li>
+                <li><a href="./fale-conosco.php">Fale Conosco</a></li>
                 <li><a href="https://www.linkedin.com/">Trabalhe Conosco</a></li>
             </ul>
             <ul id="footer-social-ul">

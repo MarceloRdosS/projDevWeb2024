@@ -108,7 +108,7 @@
 			<div id="footer-top">
 				<ul id="footer-menu">
 					<li><a href="./quem-somos.html">Quem Somos</a></li>
-					<li><a href="./fale-conosco.html">Fale Conosco</a></li>
+					<li><a href="./fale-conosco.php">Fale Conosco</a></li>
 					<li><a href="https://www.linkedin.com/">Trabalhe Conosco</a></li>
 				</ul>
 				<ul id="footer-social-ul">

@@ -22,7 +22,7 @@
             $mais_informacoes = $_POST['mensagem'];
 
             // Inserir os dados na tabela
-            $query = "INSERT INTO evento (nome_do_casal, celular, data_do_evento, numero_de_convidados, mais_informacoes)
+            $query = "INSERT INTO tbevento (nome_do_casal, celular, data_do_evento, numero_de_convidados, mais_informacoes)
                       VALUES ('$nome_casal', '$celular', '$data_evento', '$numero_convidados', '$mais_informacoes')";
             
             if (mysqli_query($conn, $query)) {
