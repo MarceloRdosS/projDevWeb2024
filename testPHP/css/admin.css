@@ -12,3 +12,15 @@ body {
 h1 {
 	color: #024059;
 }
+#navbar {
+    background-color: #024059; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+}
