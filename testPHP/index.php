@@ -79,11 +79,24 @@
 		</nav>
 		<main>
 			<figure class="logo">
-					><img src="../img/logoImg.png" alt="logo" class="logoImg" 
+					<img src="../img/logoImg.png" alt="logo" class="logoImg" 
 				/></a>
 			</figure>
 		</main>
-
+		<div class="separacao">
+			<h1>Seja Bem-Vindo Ao Seu Ponto De Encontro à Beira-Mar!</h1>
+		</div>
+		<div id="background02">
+				<h1>
+				O Quiosque Moana é o destino ideal para casamentos e eventos à beira-mar no Rio de Janeiro. 
+				Localizado na bela praia do Recreio dos Bandeirantes, o Moana encanta com seu cenário natural deslumbrante e serviço impecável.
+				Com mais de 500 eventos realizados, oferecemos experiências únicas e personalizadas, combinando elegância e simplicidade.
+				Nossa equipe dedicada garante que cada detalhe seja perfeito, transformando sonhos em realidade em um ambiente paradisíaco.
+				</h1>
+			</div>
+		<div class="separacao">
+			<h1>Venha Realizar o Casamento dos seus Sonhos!</h1>
+		</div>
 		<section>
 			<div id="info">
 				<div id="map"></div>
