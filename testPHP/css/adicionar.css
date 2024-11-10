@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Arial", sans-serif;
+    background: url('./img/moana-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#navbar {
+    background-color: #024059; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+}
+
+#navbar img {
+    height: 50px; 
+    width: auto;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu li {
+    margin-left: 20px;
+}
+
+#menu li a {
+    text-decoration: none;
+}
+
+#voltarBtn {
+    color: gold; 
+    border: 2px solid gold; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#voltarBtn:hover {
+    background-color: gold; 
+    color: #024059; 
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    flex: 1; 
+    margin-top: 80px; 
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #024059;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #024059;
+}
+
+.btn-success {
+    background-color: #024059;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #024059; 
+    color: gold;
+}
