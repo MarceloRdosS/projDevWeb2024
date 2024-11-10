@@ -106,3 +106,31 @@ footer {
 	background-color: #024059;
 	color: gold;
 }
+
+@media only screen and (max-width: 1024px) {
+	.wrapper {
+		margin-top: 650px;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	#navbar {
+		height: auto;
+	}
+	.wrapper {
+		margin-top: 100%;
+		width: 100%;
+	}
+	.table-responsive {
+		display: block;
+	}
+	.container {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.wrapper {
+		margin-top: 900px;
+	}
+}
