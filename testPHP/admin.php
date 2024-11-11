@@ -1,13 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] != 'admin') {
-    header('Location: login.php');
-    exit();
-}
-
 include('conexao.php');
-
-// Consultas SQL
+session_start();
+if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 'admin') {
+header('Location: login.php');
+exit(); }
 $query_users = "SELECT * FROM tblogin";
 $result_users = mysqli_query($conn, $query_users);
 
@@ -29,13 +25,15 @@ $result_contatos = mysqli_query($conn, $query_contatos);
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/indexcss.css">
     <link rel="stylesheet" href="./css/admin.css">
+    <script src="./script/admin.js"></script>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <nav id="navbar">
-        <a href="./index.php"><img src="./img/logoimg-no-undertext.png" alt="Quiosque Moana Logo"></a>
+        <img src="./img/logoimg-no-undertext.png" alt="Quiosque Moana Logo">
         <ul id="menu">
-            <li><a href="./index.php"><button id="voltarBtn">Voltar</button></a></li>
+            <li><button id="voltarBtn" onclick="fecharPag()">Voltar</button></li>
         </ul>
     </nav>
 

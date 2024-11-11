@@ -12,23 +12,23 @@
         <h1>Peça o seu orçamento</h1>
         <p>Faça o seu <b>orçamento grátis</b> e logo entraremos em contato</p>
         <?php
-        include('conexao.php'); // Inclui o arquivo de conexão com o banco de dados
-
+        include('conexao.php');
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $nome_casal = $_POST['nomeCasal'];
             $celular = $_POST['celular'];
             $data_evento = $_POST['data'];
             $numero_convidados = $_POST['convidados'];
             $mais_informacoes = $_POST['mensagem'];
-
-            // Inserir os dados na tabela
             $query = "INSERT INTO tbevento (nome_do_casal, celular, data_do_evento, numero_de_convidados, mais_informacoes)
                       VALUES ('$nome_casal', '$celular', '$data_evento', '$numero_convidados', '$mais_informacoes')";
-            
             if (mysqli_query($conn, $query)) {
-                echo "<p>Formulário enviado com sucesso!</p>";
+                echo"<script language='javascript'>
+                window.alert('Orçamento enviado com sucesso! Você pode fechar a página, fique de olho no whatsapp para a receber a resposta!')
+                        </script>";
             } else {
-                echo "<p>Erro ao enviar formulário: " . mysqli_error($conn) . "</p>";
+                echo"<script language='javascript'>
+                window.alert('Erro na hora de enviar formulário!')
+                        </script>";
             }
         }
         ?>
@@ -39,6 +39,8 @@
                 id="nomeCasal"
                 name="nomeCasal"
                 placeholder="Nomes Completos"
+                pattern="[A-Za-zÀ-ÿ\s]+"
+                title="Apenas letras são permitidas" 
                 required
             />
 
@@ -48,8 +50,10 @@
                 name="celular"
                 id="celular"
                 placeholder="Celular para Contato"
-                required
+                pattern="\d+" title="Apenas números são permitidos" 
+                minlength="10"
                 maxlength="11"
+                required
             />
             <div id="dataArea">
                 <label for="data">Data do evento:</label>

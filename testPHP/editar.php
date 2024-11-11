@@ -1,6 +1,10 @@
 <?php
 include('conexao.php');
-
+session_start();
+if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 'admin') {
+    header('Location: login.php');
+    exit();
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $tel = $_POST['tel'];
@@ -31,7 +35,7 @@ $user = mysqli_fetch_assoc($result);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Usuário</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -40,7 +44,7 @@ $user = mysqli_fetch_assoc($result);
             <input type="hidden" name="email" value="<?php echo $user['email']; ?>">
             <div class="form-group">
                 <label for="tel">Telefone:</label>
-                <input type="text" class="form-control" id="tel" name="tel" value="<?php echo $user['tel']; ?>" required>
+                <input type="text" class="form-control" id="tel" name="tel" value="<?php echo $user['tel']; ?>" minlength="10" maxlength="11"  pattern="\d+" title="Apenas números são permitidos" required >
             </div>
             <div class="form-group">
                 <label for="cargo">Cargo:</label>
@@ -51,9 +55,11 @@ $user = mysqli_fetch_assoc($result);
             </div>
             <div class="form-group">
                 <label for="senha">Nova Senha (opcional):</label>
-                <input type="password" class="form-control" id="senha" name="senha">
+                <input type="password" class="form-control" id="senha" name="senha"
+                minlength="5">
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="./admin.php" class="btn btn-info">Voltar</a>
         </form>
     </div>
 </body>

@@ -11,20 +11,23 @@
     <main class="registro-principal">
         <h1>FAÇA O REGISTRO</h1>
         <?php
-        include('conexao.php'); // Arquivo de conexão com o banco de dados
-
+        include('conexao.php');
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $email = $_POST['email'];
-            $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografa a senha
+            $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
             $telefone = $_POST['tel'];
-
-            // Insere os dados no banco de dados
-            $query = "INSERT INTO tblogin (email, senha, tel) VALUES ('$email', '$senha', '$telefone')";
-            if (mysqli_query($conn, $query)) {
-                echo "<p>Registro realizado com sucesso!</p>";
-            } else {
-                echo "<p>Erro ao registrar: " . mysqli_error($conn) . "</p>";
-            }
+            $email_check_query = "SELECT email FROM tblogin WHERE email = '$email'";
+             $email_check_result = mysqli_query($conn, $email_check_query);
+            if (mysqli_num_rows($email_check_result) > 0) {
+                echo"<script language='javascript'>
+                window.alert('Email já foi registrado, tente outro!')
+                        </script>";
+            }else{
+                $query = "INSERT INTO tblogin (email, senha, tel) VALUES ('$email', '$senha', '$telefone')";
+                echo"<script language='javascript'>
+                window.alert('Registro feito com sucesso!')
+                        </script>";
+            }   
         }
         ?>
         <form class="registro-formulario" action="registro.php" method="post">
@@ -43,6 +46,7 @@
                 id="senha"
                 name="senha"
                 placeholder="Sua senha"
+                minlength="5"
                 required
             />
 
@@ -52,6 +56,10 @@
                 id="tel"
                 name="tel"
                 placeholder="Seu telefone"
+                minlength="10"
+                maxlength="11"
+                pattern="\d+"
+                title="Apenas números são permitidos" 
                 required
             />
 

@@ -6,7 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-    <script src="./script/login.js"></script>
+    <script src="./script/admin.js"></script>
 </head>
 <body>
     <main class="login-principal">
@@ -26,10 +26,9 @@
 
             // Verificar se o usuário existe e a senha está correta
             if ($user && password_verify($senha, $user['senha'])) {
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['user_role'] = $user['cargo'];
+                $_SESSION['cargo'] = $user['cargo'];
                 if ($user['cargo'] == 'admin') {
-                    echo "<script>openAdmin();</script>";
+                    echo "<script>abrirAdm();</script>";
                 } else {
                     header('Location: servicos.php'); // Redireciona para a página de serviços
                 }
@@ -55,6 +54,7 @@
                 id="senha"
                 name="senha"
                 placeholder="Sua senha"
+                minlength="5"
                 required
             />
 

@@ -1,4 +1,4 @@
-function openAdmin() {
+function abrirAdm() {
 	var adminWindow = window.open(
 		"admin.php",
 		"_self",
@@ -6,4 +6,7 @@ function openAdmin() {
 	);
 	adminWindow.moveTo(0, 0);
 	adminWindow.resizeTo(screen.width, screen.height);
+}
+function fecharPag() {
+	window.close();
 }

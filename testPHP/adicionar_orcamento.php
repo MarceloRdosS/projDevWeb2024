@@ -1,6 +1,10 @@
 <?php
 include('conexao.php'); // Inclui o arquivo de conexão com o banco de dados
-
+session_start();
+if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 'admin') {
+    header('Location: login.php');
+    exit();
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome_casal = $_POST['nome_do_casal'];
     $celular = $_POST['celular'];
@@ -36,11 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="adicionar_orcamento.php" method="post">
         <div class="form-group">
                 <label for="nomeCasal">Nome do Casal:</label>
-                <input type="text" class="form-control" id="nome_do_casal" name="nome_do_casal" required>
+                <input type="text" class="form-control" id="nome_do_casal" name="nome_do_casal" pattern="[A-Za-zÀ-ÿ\s]+" title="Apenas letras são permitidas" required >
             </div>
             <div class="form-group">
                 <label for="celular">Celular:</label>
-                <input type="text" class="form-control" id="celular" name="celular" required>
+                <input type="tel" class="form-control" id="celular" name="celular" pattern="\d+" title="Apenas números são permitidos" minlength="10" maxlength="11" required>
             </div>
             <div class="form-group">
                 <label for="data_do_evento">Data do Evento:</label>

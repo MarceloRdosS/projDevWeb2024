@@ -1,6 +1,10 @@
 <?php
 include('conexao.php');
-
+session_start();
+if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 'admin') {
+    header('Location: login.php');
+    exit();
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
@@ -23,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Usuário - Quiosque Moana</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body style="margin: 0; font-family: Arial, sans-serif; background: url('./img/moana-background.jpg') no-repeat center center fixed; background-size: cover; height: 100%; display: flex; flex-direction: column;">
 
@@ -50,11 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div class="form-group">
                     <label for="senha" style="color: #024059;">Senha:</label>
-                    <input type="password" class="form-control" id="senha" name="senha" required style="border-radius: 5px;">
+                    <input type="password" class="form-control" id="senha" name="senha" minlength="4" required style="border-radius: 5px;">
                 </div>
                 <div class="form-group">
                     <label for="tel" style="color: #024059;">Telefone:</label>
-                    <input type="text" class="form-control" id="tel" name="tel" required style="border-radius: 5px;">
+                    <input type="tel" class="form-control" id="celular" name="celular" pattern="\d+" title="Apenas números são permitidos" minlength="10" maxlength="11" required style="border-radius: 5px;">
                 </div>
                 <div class="form-group">
                     <label for="cargo" style="color: #024059;">Cargo:</label>
