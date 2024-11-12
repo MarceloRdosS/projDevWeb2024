@@ -16,7 +16,7 @@ CREATE TABLE `tbcontato` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `tbcontato` (`nome`, `email`, `assunto`, `mensagem`) VALUES
-('Marcelo', 'marcelo01@gmail.com', 'olá', 'testando');
+('Marcelo', 'marcelo@gmail.com', 'comida ruim', 'Comida com gosto ruim e fria');
 
 CREATE TABLE `tbevento` (
   `nome_do_casal` varchar(255) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE `tbevento` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `tbevento` (`nome_do_casal`, `celular`, `data_do_evento`, `numero_de_convidados`, `mais_informacoes`) VALUES
-('Matheus e Jules', '190', '2024-11-29', '100-150', '');
+('João e Maria', '21972354109', '2025-07-13', '200-250', 'Gostaríamos de incluir uma mesa de doces e um espaço para fotos. Além disso, precisamos de um DJ para a festa.');
 
 CREATE TABLE `tblogin` (
   `email` varchar(128) NOT NULL,
@@ -37,9 +37,8 @@ CREATE TABLE `tblogin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `tblogin` (`email`, `senha`, `tel`, `cargo`) VALUES
-('admin@admin', '$2y$10$rEGY0RZgrkPPQLXhWmF9B.pPSgfV2wYA1mQAVXZlhcqk3Yu8cKJci', 3333, 'admin'),
-('marcelo@gmail.com', '$2y$10$ogYITzTTup0tYR.hnGCymuAHVm7RNZk6VN5hEWem3Pf4/gc52QlVS', 219724041, 'admin'),
-('usuario@teste', '$2y$10$Xdp0I55PxpRiIMYBGhJoVuKWPQaqcF/ULEakP0MoEUNCWh9YOVrGG', 0, 'usuario');
+('admin@admin', '$2y$10$GXCzYz3jV3TJ4G8/ypiIKOiQjqdpYf0WOEcZ8i3N48cbWXRxSDQLW', 2147483647, 'admin'),
+('marcelo@gmail.com', '$2y$10$ogYITzTTup0tYR.hnGCymuAHVm7RNZk6VN5hEWem3Pf4/gc52QlVS', 219724041, 'admin');
 
 
 ALTER TABLE `tbcontato`

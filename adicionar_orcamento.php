@@ -1,5 +1,5 @@
 <?php
-include('conexao.php'); // Inclui o arquivo de conexão com o banco de dados
+include('conexao.php');
 session_start();
 if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 'admin') {
     header('Location: login.php');
@@ -11,15 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data_evento = $_POST['data_do_evento'];
     $numero_convidados = $_POST['numero_de_convidados'];
     $informacoes = $_POST['mais_informacoes'];
-
-    // Inserir os dados na tabela evento
     $query = "INSERT INTO tbevento (celular, nome_do_casal, data_do_evento, numero_de_convidados, mais_informacoes) 
               VALUES ('$celular', '$nome_casal', '$data_evento', '$numero_convidados', '$informacoes')";
     
     if (mysqli_query($conn, $query)) {
-        echo "Orçamento adicionado com sucesso!";
+        echo '<h1 class="text-center">Orçamento adicionado com sucesso!</h1>';
     } else {
-        echo "Erro ao adicionar orçamento: " . mysqli_error($conn);
+        echo '<h1 class="text-center">Error ao adicionar o orçamento!</h1>' . mysqli_error($conn);
     }
 
     mysqli_close($conn);

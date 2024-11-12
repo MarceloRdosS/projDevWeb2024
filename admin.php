@@ -99,6 +99,9 @@ $result_contatos = mysqli_query($conn, $query_contatos);
 
             <div class="container">
                 <h2 class="d-flex justify-content-center">Contatos Recebidos</h2>
+                <div class="d-flex justify-content-end">
+                    <a href="./excluir_mensagens.php" class="btn btn-danger mb-2" id="excluirMensagensBtn">Excluir Mensagens</a>
+                </div>
                 <table class="table table-bordered table-responsive">
                     <thead>
                         <tr>

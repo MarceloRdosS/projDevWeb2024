@@ -13,24 +13,20 @@
         <h1>FAÇA O LOGIN</h1>
         <?php
         session_start();
-        include('conexao.php'); // Arquivo de conexão com o banco de dados
-
+        include('conexao.php');
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
 
-            // Consulta ao banco de dados
             $query = "SELECT * FROM tblogin WHERE email = '$email'";
             $result = mysqli_query($conn, $query);
             $user = mysqli_fetch_assoc($result);
-
-            // Verificar se o usuário existe e a senha está correta
             if ($user && password_verify($senha, $user['senha'])) {
                 $_SESSION['cargo'] = $user['cargo'];
                 if ($user['cargo'] == 'admin') {
                     echo "<script>abrirAdm();</script>";
                 } else {
-                    header('Location: servicos.php'); // Redireciona para a página de serviços
+                    header('Location: servicos.php');
                 }
                 exit();
             } else {

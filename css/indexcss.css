@@ -19,6 +19,57 @@ section {
 	background-attachment: fixed;
 }
 
+.separacao {
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: gold;
+	background-image: linear-gradient(to right, #02405983, #b5babb79);
+}
+
+.separacao h1 {
+	font-family: "Dancing Script";
+	font-size: 2.5em;
+	font-style: italic;
+}
+
+#background02 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80%;
+	background: url(../img/backgroundindex02.jpg) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#background02 h1 {
+	width: 50%;
+	font-size: 1.5em;
+	display: block;
+	background-color: #0240596e;
+	border-radius: 30px;
+	padding: 2%;
+	color: rgb(241, 213, 50);
+	font-weight: 600;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 1.2;
+	letter-spacing: 0.05em;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-shadow: rgb(99, 84, 4) 1px 1px 1px;
+}
+
+#background02 h1:hover {
+	font-size: 1.7em;
+	padding: 2.7%;
+	transition: 0.2s;
+}
+.separacao h1:hover {
+	font-size: 2.7em;
+	transition: 0.2s;
+}
+
 #navbar {
 	width: 100%;
 	height: 80px;
@@ -202,6 +253,14 @@ nav button {
 		position: relative;
 		height: 100px;
 	}
+
+	.separacao {
+		height: 20%;
+	}
+	#background02 h1 {
+		width: 90%;
+	}
+
 	#info-content {
 		width: 90%;
 		flex-direction: column;
@@ -255,6 +314,27 @@ nav button {
 }
 
 @media screen and (max-width: 480px) {
+	#background02 {
+		height: 600px;
+	}
+	#background02 h1 {
+		font-size: 1em;
+	}
+	#background02 h1:hover {
+		font-size: 1.2em;
+	}
+	.separacao {
+		height: 30%;
+	}
+
+	.separacao h1 {
+		font-size: 1.5em;
+	}
+	.separacao h1:hover {
+		font-size: 1.7em;
+		transition: 0.2s;
+	}
+
 	#navbar {
 		height: 460px;
 		position: absolute;

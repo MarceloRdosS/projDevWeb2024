@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div class="form-group">
                     <label for="tel" style="color: #024059;">Telefone:</label>
-                    <input type="tel" class="form-control" id="celular" name="celular" pattern="\d+" title="Apenas números são permitidos" minlength="10" maxlength="11" required style="border-radius: 5px;">
+                    <input type="tel" class="form-control" id="tel" name="tel" pattern="\d+" title="Apenas números são permitidos" minlength="10" maxlength="11" required style="border-radius: 5px;">
                 </div>
                 <div class="form-group">
                     <label for="cargo" style="color: #024059;">Cargo:</label>

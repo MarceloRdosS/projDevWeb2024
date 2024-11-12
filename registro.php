@@ -17,17 +17,23 @@
             $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
             $telefone = $_POST['tel'];
             $email_check_query = "SELECT email FROM tblogin WHERE email = '$email'";
-             $email_check_result = mysqli_query($conn, $email_check_query);
+            $email_check_result = mysqli_query($conn, $email_check_query);
             if (mysqli_num_rows($email_check_result) > 0) {
-                echo"<script language='javascript'>
+                echo "<script language='javascript'>
                 window.alert('Email já foi registrado, tente outro!')
-                        </script>";
-            }else{
+                </script>";
+            } else {
                 $query = "INSERT INTO tblogin (email, senha, tel) VALUES ('$email', '$senha', '$telefone')";
-                echo"<script language='javascript'>
-                window.alert('Registro feito com sucesso!')
-                        </script>";
-            }   
+                if (mysqli_query($conn, $query)) {
+                    echo "<script language='javascript'>
+                    window.alert('Registro feito com sucesso!')
+                    </script>";
+                } else {
+                    echo "<script language='javascript'>
+                    window.alert('Erro ao registrar: " . mysqli_error($conn) . "')
+                    </script>";
+                }
+            }
         }
         ?>
         <form class="registro-formulario" action="registro.php" method="post">
@@ -67,15 +73,15 @@
         </form>
         <p class="login">
         <a
-						href="./login.php"
-						onclick="
-        var width = 500;
-        var height = 500;
-        var left = (screen.width / 2) - (width / 2);
-        var top = (screen.height / 2) - (height / 2);
-        window.open(this.href, 'mywin', 'width=' + width + ', height=' + height + ', top=' + top + ', left=' + left + ', toolbar=1, resizable=0');
-        return false;"
-					>Já tem uma conta? Faça login aqui!</a>
+            href="./login.php"
+            onclick="
+            var width = 500;
+            var height = 500;
+            var left = (screen.width / 2) - (width / 2);
+            var top = (screen.height / 2) - (height / 2);
+            window.open(this.href, 'mywin', 'width=' + width + ', height=' + height + ', top=' + top + ', left=' + left + ', toolbar=1, resizable=0');
+            return false;"
+        >Já tem uma conta? Faça login aqui!</a>
         </p>
     </main>
 </body>
