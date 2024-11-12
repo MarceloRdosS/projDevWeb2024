@@ -79,7 +79,7 @@
 		</nav>
 		<main>
 			<figure class="logo">
-					<img src="../img/logoImg.png" alt="logo" class="logoImg" 
+					<img src="./img/logoImg.png" alt="logo" class="logoImg" 
 				/></a>
 			</figure>
 		</main>
