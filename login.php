@@ -67,7 +67,7 @@
         window.open(this.href, 'mywin', 'width=' + width + ', height=' + height + ', top=' + top + ', left=' + left + ', toolbar=1, resizable=0');
         return false;"
 					>
-                    Não tem conta? registre-se aqui!
+                    Não tem conta? Registre-se aqui!
                     </a>
         </p>
     </main>
