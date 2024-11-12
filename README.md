@@ -14,9 +14,8 @@ Nosso objetivo é proporcionar aos usuários uma plataforma intuitiva e eficient
 
 ## 🛠️ Tecnologias Utilizadas
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** Ainda não implementado!
-- **Banco de Dados:** Ainda não implementado!
-- **Hospedagem:** Ainda não implementado!
+- **Backend:** PHP E SQL
+- **Banco de Dados:** Apache E MySQL
 
 ## 🔄 Evolução Contínua
 Assim como nossa equipe está sempre em busca de novas formas de superar as expectativas de nossos clientes, este projeto no GitHub também estará em constante evolução, recebendo atualizações e melhorias. 
